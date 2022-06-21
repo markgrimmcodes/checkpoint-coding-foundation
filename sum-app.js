@@ -4,10 +4,15 @@ class SumApp {
   }
 
   addNumber(n) {
-    this.numbers += n;
+    this.numbers.push(n);
   }
   getSum() {
-    return this.numbers;
+    let sum = 0;
+
+    for (let summand of this.numbers) {
+      sum = sum + summand;
+    }
+    return sum;
   }
   reset() {
     this.numbers = [];
