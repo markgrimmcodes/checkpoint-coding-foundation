@@ -1,13 +1,11 @@
 function zipStrings(strA, strB) {
   let mergedArr = [];
-  const arrStrA = strA.split("");
-  const arrStrB = strB.split("");
+  let arrStrA = strA.split("");
+  let arrStrB = strB.split("");
 
-  for (let el of arrStrA) {
-    mergedArr.push(el);
-    for (let ol of arrStrB) {
-      mergedArr.push(ol);
-    }
+  for (let i = 0; i < arrStrA.length || i < arrStrB.length; i++) {
+    mergedArr.push(arrStrA[i]);
+    mergedArr.push(arrStrB[i]);
   }
-  return mergedArr.join();
+  return mergedArr.join("");
 }
